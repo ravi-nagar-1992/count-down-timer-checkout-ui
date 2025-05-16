@@ -2,6 +2,7 @@ import {
   reactExtension,
   Banner,
   BlockStack,
+  Text,
 } from "@shopify/ui-extensions-react/checkout";
 import { useEffect, useState } from "react";
 
@@ -29,10 +30,11 @@ function Extension() {
     <BlockStack padding="tight">
       <Banner title="" status="critical">
         {timeLeft > 0 ? (
-          <>Your order is reserved for {minutes}:{seconds} min! Hurry, sale items are selling fast.</>
+          <Text emphasis="bold">Your order is reserved for {minutes}:{seconds} min! Hurry, sale items are selling fast.</Text>
         ) : (
-          <>YOUR ORDER RESERVATION ENDED</>
+          <Text emphasis="bold">YOUR ORDER RESERVATION ENDED</Text>
         )}
+        
       </Banner>
  </BlockStack>
   );
